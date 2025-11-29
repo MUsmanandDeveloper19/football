@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divs{
+            margin: auto;
+            position: relative;
+        }
+      .team-one-container{
+       width: 100%;   
+       height: auto;
+       border: 3px solid;
+       border-bottom-right-radius: 600px;
+       position: absolute;
+       background: red;
+       animation: team-one 2s linear infinite alternate;
+      }
+      @keyframes team-one{
+        from{
+          transition: all 34s;
+          position: absolute;
+          background-color: red;
+        }
+
+        to{
+          transition: all 34s;
+          position: absolute;
+          background-color: black;
+        }
+
+      }
+
+      .team-two-container{
+       width: 100%;   
+       height: auto;
+       border: 3px solid;
+        border-top-left-radius: 600px;
+        position: absolute;
+        left: 500px;
+        background-color: black;
+        animation: team-two 2s linear infinite alternate;
+      }
+    </style>
+</head>
+<body>
+   <div class="divs">
+     <div class="team-one-container"></div>
+    <div class="team-two-container"></div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,698 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-color: #222831;
+}
+
+/* BANNER-SECTION */
+ .banner-div{
+  width: 100%;
+  height: 45px;
+  border: 1px solid;
+  background-color: red;
+  animation: banner-animation 2s linear infinite alternate;
+ }
+
+ @keyframes banner-animation{
+  from{
+    transition: all 34s;
+    background-color: red;
+  }
+  to{
+    transition: all 34s;
+    background-color: rgba(147, 6, 6, 0.968);
+  }
+ }
+ 
+ #banner-content{
+  animation: banr-contnt 2s linear infinite alternate;
+ }
+ @keyframes banr-contnt{
+  1%{
+    transition: all 34s;
+    color: white;
+  }
+
+  100%{
+    transition: all 34s;
+    color: red;
+  }
+ }
+
+/* BANNER-SECTION */
+
+/* NAVBAR */
+#Navbar{
+    z-index: 111;
+}
+
+#navbar-logo{
+    color: white;
+    animation: nav-logo 3s linear infinite alternate;
+}
+
+@keyframes nav-logo{
+  From{
+    opacity: 0;
+    transition: all 34s;
+  }
+  to{
+    opacity: 1;
+    transition: all 34s;
+  }
+
+}
+
+/* navbar-pg-font-size */
+
+#navbar-pg-font-size{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+/* Navbar-burger-menu */
+/* From Uiverse.io by NAKAMOZ */ 
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.checkmark span {
+  width: 32px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.checkmark span:nth-child(1) {
+  top: 10%;
+}
+
+.checkmark span:nth-child(2) {
+  top: 50%;
+}
+
+.checkmark span:nth-child(3) {
+  top: 90%;
+}
+
+.container input:checked + .checkmark span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -moz-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  -o-transform: translateY(-50%) rotate(45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  -o-transform: translateY(-50%) rotate(-45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(3) {
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  opacity: 0;
+}
+/* Navbar-burger-menu */
+
+/* navbar-pg-font-size */
+
+/* NAVBAR */
+
+.container-div{
+    width: 100%;
+    height: 440px;
+    margin-top: -75px;
+}
+@media screen and (max-width: 991px) {
+  #container-img{
+    margin-top: 20px;
+  }
+}
+#container-img{
+  width: 100%;
+  height: 570px;
+}
+@media screen and (max-width: 320px) {
+  #container-img{
+  width: 100%;
+  height: 440px;
+}
+}
+
+@media screen and (max-width: 991px) {
+   #container-main{
+    margin-top: 10px;
+} 
+}
+
+.container-img-effect{
+    width: 100%;
+    height: 570px;
+    border: 1px solid;
+    background-color: rgba(7, 3, 3, 0.521);
+    position: absolute;
+    top: -5px;
+}
+@media screen and (max-width: 320px) {
+  .container-img-effect{
+    width: 100%;
+    height: 420px;
+    border: 1px solid;
+    background-color: rgba(7, 3, 3, 0.521);
+    position: absolute;
+    top: -5px;
+}
+}
+
+@media screen and (min-width: 991px) {
+  .container-img-effect{
+    width: 100%;
+    height: 570px;
+    border: 1px solid;
+    background-color: rgba(7, 3, 3, 0.521);
+    position: absolute;
+    top: 46px;
+
+}
+}
+/* WORLD-EVENT-LINE-CSS */
+.wavy {
+  position: relative;
+  top: 40px;
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+.wavy span {
+  position: relative;
+  display: inline-block;
+  color: #bc3333;
+  font-size: 2em;
+  text-transform: uppercase;
+  animation: animate 1.5s ease-in-out infinite;
+  animation-delay: calc(.1s * var(--i))
+}
+@keyframes animate {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  20% {
+    color: white;
+    transform: translateY(-20px);
+  }
+  40% {
+    color: black;
+    transform: translateY(0px);
+  }
+}
+/* WORLD-EVENT-LINE-CSS */
+
+@media screen and (max-width: 320px) {
+  #world-cup-line{
+    font-size: 23px;
+   position: relative;
+   top: -30px;
+    /* Use the variable in your animation or style */
+  animation-delay: calc(var(--i) * 0.1s);
+  }
+    }
+
+/* Set the variable value using classes */
+.i-1 { --i: 1;}
+.i-2 {--i: 2;}
+.i-3 {--i: 3;}
+.i-4 {--i: 4;}
+.i-5 {--i: 5;}
+.i-6 {--i: 6;}
+.i-7 {--i: 7;}
+.i-8 {--i: 8;}
+.i-9 {--i: 9;}
+.i-10 {--i: 10;}
+.i-11 {--i: 11;}
+.i-12 {--i: 12;}
+.i-13 {--i: 13;}
+.i-14 {--i: 14;}
+.i-15 {--i: 15;}
+.i-16 {--i: 16;
+}
+
+#container-pera{
+   position: relative;
+   top: 40px;
+  font-weight: 100;
+}
+@media screen and (max-width: 708px) {
+ #container-pera{
+   position: relative;
+   top: 40px;
+  font-weight: 100;
+  font-size: 14px;
+} 
+}
+@media screen and (max-width: 564px) {
+ #container-pera{
+   position: relative;
+   top: 40px;
+  font-weight: 100;
+  opacity: 0;
+} 
+}
+#container-btn{
+  font-size: 12px;
+}
+/* Container-Timer-Code */
+/* general styling */
+:root {
+  --smaller: .75;
+}
+
+.container {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+  #countdown{
+    position: relative;
+    top: -100px;
+  } 
+}
+
+#countdown ul li span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+/* Mobile responsiveness */
+@media (max-width: 320px) {
+  #countdown ul li span {
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+
+
+h1 {
+  font-weight: normal;
+  /* letter-spacing: .125rem; */
+  text-transform: uppercase;
+}
+li {
+  display: inline-block;
+  font-size: 12px;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+li span {
+  display: block;
+  font-size: 30px;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+/* Container-Timer-Code */
+
+/* container-btns */
+
+@media screen and (max-width: 320px) {
+  #container-btns{
+  position: relative;
+  top: -60px;
+}
+}
+
+
+
+
+
+/* container-btns */
+
+/* TEAMS-SECTION */
+
+#team-one{
+  height: 300px;
+  /* width: 100%; */
+  background-color: black;
+  animation: team-one 3s linear infinite alternate;
+  border-radius: 5px;
+}
+@keyframes team-one{
+  from{
+    background-color: red;
+    position: relative;
+    left: 40px;
+  }
+  to{
+    position: relative;
+    left: 0px;
+  }
+}
+
+#team-two{
+  height: 300px;
+  /* width: 100%; */
+  background-color: red;
+  animation: team-two 3s linear infinite alternate;
+  border-radius: 5px;
+}
+@keyframes team-two{
+  from{
+    background-color: black;
+    position: relative;
+    right: 40px;
+  }
+
+  to{
+    position: relative;
+    right: 0px;
+  }
+
+}
+
+#team-memmer-font-size{
+  font-size: 13px;
+}
+
+#team-lorem{
+  opacity: 0;
+}
+
+/* TEAMS-SECTION */
+
+/* Latest-new */
+
+.red-latest-div{
+  width: 15px;
+  height: 36px;
+  border: 1px solid red;
+  background-color: red;
+  animation: 2s red-ltst-div linear infinite alternate;
+}
+@keyframes red-ltst-div{
+  from{
+    transition: all 34s;
+    background-color: white;
+    border-color: black;
+  }
+}
+
+/* .latest-news{
+  color: white;
+  transition: all 34s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  animation:  2s latest-news-animation linear infinite alternate;
+}
+@keyframes latest-news-animation{
+  from{
+    transition: all 34s;
+    color: white;
+    margin-left: 30px;
+  }
+  to{
+    transition: all 34s;
+    color: red;
+    margin-left: 0px;
+  }
+} */
+
+
+/* LATEST-NEWS-CSS-CODE */
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* LATEST-NEWS-CSS-CODE */
+
+/* PLAYERS */
+.Latest-player-container {
+      position: relative;
+      width: 380px;
+      height: 460px; /* ???? ?????? ???? ??? ???? */
+      overflow: hidden; /* ??????? ?? ?????? ?? ??? */
+      border-radius: 4px;
+    }
+
+    .Latest-player-container img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease; /* ?????????? ?????? */
+    }
+
+    .Latest-player-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* ????-???????????? ????? ????? */
+      opacity: 0; /* ???? ??? ????? ?? ?????? */
+      transition: opacity 0.3s ease; /* ?????????? ?????? */
+    }
+
+    .Latest-player-container:hover img {
+      transform: scale(1.1); /* ???? ?? 10% ???? ???? ?? */
+    }
+
+    .Latest-player-container:hover .Latest-player-overlay {
+      opacity: 1; /* ????? ?? ?????? */
+    }
+/* PLAYERS */
+
+/* PLAYERS-BOTTOM-CONTANT */
+
+#Romolu-line{
+  color: rgb(11, 192, 98);
+}
+
+.Latest-palyer-one-content{
+  position: relative;
+  top: -60px;
+}
+
+#latest-players-img-content{
+  background-color: #222831;
+  animation: player-content 1s linear infinite alternate;
+}
+@keyframes player-content{
+  from{
+    transition: all 34s;
+    background-color: transparent;
+    width: 1%;
+  }
+  to{
+    transition: all 34s;
+    background-color: #222831;
+    width: 100%;
+  }
+}
+
+#mellisa-allison-img{
+  width: 40px; 
+  height: 40px; 
+  border-radius: 100%;
+}
+
+#mellisa-allison-content{
+  font-size: 14px; 
+  color: darkgray;
+}
+
+#mellisa-allison-img-content{
+  color: white; 
+  font-size: 15px; 
+  font-weight: 100; 
+  position: relative; 
+  top: -27px; 
+  left: -21px;
+}
+
+/* PLAYERS-BOTTOM-CONTANT */
+
+/* Latest-news */
+
+
+/* NEXT-MATCH-TEAM */
+
+#next-match{
+  width: 100%;
+  height: 47px;
+  border: 1px solid red;
+  background-color: red;
+  animation: NextMatchRedDiv 2s linear infinite alternate ;
+}
+@keyframes NextMatchRedDiv{
+  from{
+    transition: all 34s;
+  }
+  to{
+    transition: all 34s;
+  }
+}
+@keyframes
+
+/* next-match-animation */
+#next-match-animation{
+margin-top: 5px;
+animation: NextMatchAnimation 2s linear infinite alternate;
+}
+@keyframes NextMatchAnimation {
+  from{
+    transition: all 34s;
+    opacity: 0;
+  }
+  to{
+    transition: all 34s;
+    opacity: 1;
+  }
+}
+/* next-match-animation */
+
+/* NEXT-MATCH-TIMER-CSS-CODE */
+   .next-match-timer {
+      display: flex;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .next-match-unit {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .next-match-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .next-match-label {
+      font-size: 10px;
+      color: #888;
+      text-transform: uppercase;
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 500px) {
+      .next-match-number {
+        font-size: 14px;
+      }
+      .next-match-label {
+        font-size: 8px;
+      }
+    }
+/* NEXT-MATCH-TIMER-CSS-CODE */
+
+/* NEXT-MATCH-TEAM */
+
+/* OUR-BLOG */
+
+.red-div-our-blog{
+  height: 45px; width: 20px; 
+  border: 1px solid red; 
+  background-color: red; 
+  border-radius: 3px;
+  animation: our-blog-title-div 3s linear infinite alternate ;
+}
+@keyframes our-blog-title-div{
+  to{
+    transition: all 34s;
+    background-color: red;
+  }
+  
+ from{
+  transition: all 34s;
+  background-color: transparent;
+  border-color: transparent;
+ }
+
+}
+
+.our-blog-tilte{
+ font-weight: 300;
+ color: white;
+ transition: all 34s;
+ animation: our-blog-title-div-content 3s linear infinite alternate;
+}
+@keyframes our-blog-title-div-content {
+  to{
+    transition: all 34s;
+    color: white;
+  }
+  from{
+    transition: all 34s;
+    color: transparent;
+  }
+}
+/* OUR-BLOG */

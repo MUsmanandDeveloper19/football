@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Next Match Countdown</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .next-match-timer {
+      display: flex;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .next-match-unit {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .next-match-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .next-match-label {
+      font-size: 10px;
+      color: #888;
+      text-transform: uppercase;
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 500px) {
+      .next-match-number {
+        font-size: 14px;
+      }
+      .next-match-label {
+        font-size: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="next-match-timer">
+    <div class="next-match-unit">
+      <div class="next-match-number" id="next-match-weeks">00</div>
+      <div class="next-match-label">Weeks</div>
+    </div>
+    <div class="next-match-unit">
+      <div class="next-match-number" id="next-match-days">00</div>
+      <div class="next-match-label">Days</div>
+    </div>
+    <div class="next-match-unit">
+      <div class="next-match-number" id="next-match-hours">00</div>
+      <div class="next-match-label">Hours</div>
+    </div>
+    <div class="next-match-unit">
+      <div class="next-match-number" id="next-match-minutes">00</div>
+      <div class="next-match-label">Minutes</div>
+    </div>
+    <div class="next-match-unit">
+      <div class="next-match-number" id="next-match-seconds">00</div>
+      <div class="next-match-label">Seconds</div>
+    </div>
+  </div>
+
+  <script>
+    const nextMatchTargetDate = new Date("2025-12-31T23:59:59").getTime();
+
+    function updateNextMatchTimer() {
+      const now = new Date().getTime();
+      const distance = nextMatchTargetDate - now;
+
+      const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("next-match-weeks").textContent = String(weeks).padStart(2, '0');
+      document.getElementById("next-match-days").textContent = String(days).padStart(2, '0');
+      document.getElementById("next-match-hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("next-match-minutes").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("next-match-seconds").textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateNextMatchTimer, 1000);
+    updateNextMatchTimer();
+  </script>
+</body>
+</html>
